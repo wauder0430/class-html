@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex17_form.html -->
+	<!-- 
+		
+		<form>, 폼
+		 
+		HTML Form + HTML Input Control
+		- 입력 양식
+		- 클라이언트(사용자)로부터 입력장치(키보드, 마우스, 터치 등)을 통해서 데이터 입력받아 역할(HTML Input Control) > 데이터를 서버로 전송하는 역할(HTML Form)
+		 
+		ex) 텍스트 박스, 라디어 버튼, 체크 박스, 버튼
+		 
+		<form> 태그
+		- 스스로 렌더링 결과를 만들지 않는다.(눈에 안보임)
+		- 기능성 태그
+		- 입력받은 값을 서버로 보내는 역할
+		
+		form.method
+		- 데이터를 서버로 전송하는 방식
+		- 서버에게 요청하는 방식(진실)
+		a. GET
+			- http://localhost:8080/HtmlTest/ex17_ok.jsp?id=hong
+			- 데이터를 수신자 주소 뒤에 붙여서 전달하는 방식
+			- ?id=hong (=Query String)
+			- ?id=hong&age=20&address=서울시
+			- 데이터가 노출
+			- URL(256자 이내) > 긴 데이터 전송 불가능
+			
+		b. POST
+			- http://localhost:8080/HtmlTest/ex17_ok.jsp
+			- 데이터를 패킷의 본문(body)에 넣어서 전달하는 방식
+			- 데이터가 노출 되지 않음
+			- 길이 제한 없음
+			
+		form.action
+			- 데이터를 수신할 서버측 프로그램 URL
+			- 서버 프로그래밍 언어로 구현한 프로그램
+				(Servlet, JSP, Spring)
+				(PHP, Python, Node.js, ASP.NET, Ruby 등..)
+		
+		
+	 -->
+	<h1>데이터 입력</h1>
+			 
+	<form method="GET" action="ex17_ok.jsp">
+	 	아이디: <input type="text" name="id">
+	 	<input type="submit" value="보내기">
+	</form>
+	
+	<h1>네이버 검색</h1>
+	<form method="GET" action="https://search.naver.com/search.naver">
+		검색어: <input type="text" name="query">
+		<input type="submit" value="검색하기">
+	</form>
+	
+</body>
+</html>
