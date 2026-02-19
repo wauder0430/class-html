@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex18_form.html  -->
+	<!-- 
+		
+		<form> 태그
+		- 컨테이너
+		- 입력값들을 서버에게 전달
+		- form.method: 전송 방식(GET, POST)
+		- form.action: 전달할 서버측 URL
+		
+		<form> 자식 태그들(= 입력 태그들)
+		
+		
+		
+		
+	 -->
+	 
+	 <h1>입력 컨트롤</h1>
+	 
+	 <form method="POST" action="ex17_ok.jsp">
+	 	<!-- 
+	 		<input> 태그
+			- 단독 태그
+			- 인라인 태그
+			
+			- input.type: 입력 컨트롤의 종류(default: text)
+			- input.name: 식별자(서버에 전송할 때 사용)
+			- input.id: 식별자(CSS, JavaScript)
+			- input.class: 식별자(CSS, JavaScript)
+			- input.size: 컨트롤의 길이, 글자 수
+			- input.maxlength: 최대 입력 글자 수 + 유효성 검사
+			- input.value: 컨트롤이 가지는 현재 입력값
+			- input.readonly: 플래그형. 읽기 전용 입력(X) + 역할(O)
+			- input.disabled: 플래그형. 비활성화  입력(X) + 역할(X)	
+			- input.accesskey: 바로가기 Alt + 키
+			- input.autofocus: 플래그형. 자동 포커스
+			- input.tabindex: 탭 순서 
+			
+	 	 -->
+	 
+	 	텍스트박스(단일라인):
+	 	<input type="text" name="txt1" id="txt1" class="txts" size="10" maxlength="5" value="홍길동" accesskey="s" tabindex="1">
+	 	
+	 	<hr>
+	 	<input type="text" tabindex="3">
+	 	<br>
+	 	<input type="text" tabindex="2">
+	 	<hr>
+	 	
+	 	<!-- 
+	 		암호상자, Password Box, Masked TextBox 
+	 		- 텍스트 박스(+ 마스킹)
+	 		- 대부분 속성이 텍스트박스와 동일
+	 		 
+	 	-->
+	 	
+	 	텍스트박스(암호):
+	 	<input type="password"> 
+	 	
+	 	<hr>
+	 	
+	 	<!--  
+	 		다중 라인 텍스트 박스
+	 		- <textarea></textarea>
+	 		- 쌍태그
+	 		- 인라인태그
+	 		- 대부분 속성이 텍스트박스와 동일
+	 		- value 속성이 없다.
+	 	
+	 	-->
+	 	
+	 	텍스트박스(다중라인):
+	 	<textarea cols="50" rows="5"></textarea>
+	 	
+	 	<hr>
+	 	<!-- 
+	 		체크 박스
+	 		- 논리값 입력
+	 		- 단일 선택, 다중 선택 
+	 	
+	 	 -->
+	 	체크 박스: <input type="checkbox" checked>
+	 	<br>
+	 	취미: <input type="checkbox"> 독서
+	 	<input type="checkbox" id="cb2"> <label for="cb2">수영</label>
+	 	<input type="checkbox"> 등산
+	 	
+	 	
+	 	<hr>
+	 	<!-- 
+	 		라디오 버튼 
+	 	
+	 	 -->
+	 	라디오 버튼: 
+	 	<label></label><input type="radio" name="rb1" checked> 남자</label>
+	 	<input type="radio" name="rb1"> 여자
+	 	<br>
+	 	
+	 	<hr>
+	 	<!-- 
+	 		셀렉트 박스
+	 		- 콤보박스, 드랍다운리스트 
+	 	
+	 	 -->
+	 	셀렉트 박스:
+	 	<select>
+	 		<option>강아지</option>
+	 		<option>고양이</option>
+	 		<option>병아리</option>
+	 	</select>
+	 	<br>	
+	 	
+	 	셀렉트 박스 (다중 선택):
+	 	<select size="5" multiple>
+	 		<option>강아지</option>
+	 		<option>고양이</option>
+	 		<option>병아리</option>
+	 	</select>
+	 	<br>	
+	 	
+	 	<hr>
+	 	애완동물:
+	 	<select>
+	 		<option disabled>● 포유류</option>
+	 		<option>강아지</option>
+	 		<option>고양이</option>
+	 		<option>돼지</option>
+	 		
+	 		<option disabled>● 파충류/양서류</option>
+	 		<option>거북이</option>
+	 		<option>도마뱀</option>
+	 		
+	 		<option disabled>● 곤충</option>
+	 		<option>메뚜기</option>
+	 		<option>귀뚜라미</option>
+	 		<option>매미</option>
+	 	</select>
+	 	
+	 	<hr>
+	 	애완동물:
+	 	<select>
+	 		<optgroup label="포유류">
+	 		<option>강아지</option>
+	 		<option>고양이</option>
+	 		<option>돼지</option>
+	 		</optgroup>
+	 		
+	 		<optgroup label="파충류/양서류">
+	 		<option>거북이</option>
+	 		<option>도마뱀</option>
+	 		</optgroup>
+	 		
+	 		<optgroup label="곤충류">
+	 		<option>메뚜기</option>
+	 		<option>귀뚜라미</option>
+	 		<option>매미</option>
+	 		</optgroup>
+	 	</select>
+	 	
+	 	<hr>
+	 	<!-- 
+	 		파일 업로드
+	 		- 첨부 파일
+	 	
+	 	 -->
+	 	 파일 선택: <input type="file">
+	 	
+	 	<hr>
+	 	<input type="submit" value="보내기">
+	 	
+	 	<hr>
+	 	<!-- 
+	 		히든 태그
+	 		- 개발자용
+	 		- 데이터를 전송은 해야하지만, 사용자에게 보이지 않아야할 데이터
+	 		
+	 	
+	 	 -->
+	 	 히든 태그: <input type="hidden" name="id" value="hong">
+		
+		
+		<hr>
+	 	<!-- 
+	 		각종 버튼
+	 	
+	 	-->
+	 	전송 버튼: <input type="submit" value="전송하기">
+	 	<hr>
+	 	취소 버튼: <input type="reset" value="초기화">
+	 	<hr>
+	 	이미지 버튼(submit): <input type="image"  src="images/catty01.png">
+	 	<hr>
+	 	그냥 버튼: <input type="button" value="버튼" onclick="alert('안녕하세요.');">
+	 	그냥 버튼: <input type="button" value="버튼" onclick="location.href='https://naver.com';">
+	 	그냥 버튼: <input type="button" value="버튼" onclick="this.form.submit();">
+	 	<hr>
+	 	
+	 	<button type="submit">버튼</button>
+	 	<button type="reset">버튼</button>
+	 	<button type="button">버튼</button>
+		
+		<hr>
+			
+		<img src="images/bullet10.png">	
+		<input type="button" value="글쓰기">
+		
+		<button>
+			<img src="images/bullet10.png">
+			글쓰기
+		</button>
+	 	
+	 	<hr>
+	 	<input type="submit" value="보내기">
+	 	
+	 	<!-- 
+	 		1. HTML 4.01 + XHTML 1.0 + HTML 5(소량)
+	 		---------------------------------------
+	 		2. HTML 5 + 나머지
+	 	
+	 	 -->
+	 	
+	 	
+	 	
+	 </form>
+	 
+</body>
+</html>

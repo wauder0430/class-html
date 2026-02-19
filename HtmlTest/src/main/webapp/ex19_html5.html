@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!-- ex19_html5.html-->
+	<h1>HTML 5</h1>
+	
+	<form method="POST" action="ex17_ok.jsp">
+	
+		이름: <input type="text" size="10">
+		
+		<hr>
+		
+		<input type="text" size="10" value="이름 입력"
+		onfocus="this.value='';">
+		
+		<hr>
+		
+		<input type="text" size="10" placeholder="이름 입력">
+		
+		<hr>
+		
+		<input type="password" size="10" placeholder="패스워드">
+		
+		<hr>
+		
+		<textarea placeholder="안내메시지"></textarea>
+		
+		<hr>
+		
+		<h2>로그인(유효성 검사)</h2>
+		
+		<!-- <div><input type="text" size="10" placeholder="아이디" required></div>
+		<div><input type="password" size="10" placeholder="비밀번호" required></div> -->
+		
+		<hr>
+		
+		<!-- 
+			시멘틱 태그
+			- 기능보다 의미에 중점을 둔 태그
+		 -->
+		
+		URL: <input type="url">
+		
+		<hr>
+		
+		자바 코드:
+		<div>
+			Integer a = 10;
+			if(a>0){
+				print('양수');
+			}
+		</div>
+		
+		<hr>
+		
+		<!-- 번역기가 <code> 태그는 번역을 하지 않는다.  -->
+		<code>int a = 10;</code>
+		
+		<hr>
+		
+		Email: <input type="email">
+		
+		<hr>
+		
+		<!-- 
+			HTML 5 문법 존재 > 실행하는 브라우저가 지원O, X
+			 
+		-->
+		
+		숫자: <input type="number">
+		
+		<hr>
+		
+		숫자: <input type="number" min="0" max="100" step="10">
+		
+		<hr>
+		
+		범위(숫자입력):
+		<input type="range" 
+			oninput="document.getElementById('rtxt').value = this.value"
+			min="20" max="2000" step="20">
+		
+		<input type="text" id="rtxt">
+		
+		<hr>
+		
+		색상:
+		<input type="color"
+			onchange="document.getElementById('ctext').value = this.value; document.body.bgColor = this.value">
+			
+		<input type="text" id="ctext">
+		
+		<hr>
+		
+		날짜/시간:
+		<input type="date"><hr>
+		<input type="month"><hr>
+		<input type="week"><hr>
+		<input type="time"><hr>
+		<input type="datetime"><hr>
+		<input type="datetime-local"><hr>
+		
+		<hr>
+		
+		진행률
+		<br>
+		<progress value="0"></progress><br>
+		<progress value="0.65"></progress><br>
+		
+		<hr>
+		
+		수치
+		<br>
+		<meter value="0"></meter><br>
+		<meter value="0.5"></meter><br>
+		<meter value="1"></meter><br>
+		
+		<meter value="20" min="-100" max="200" low="40" high="80"></meter><br>
+		<meter value="60" min="-100" max="200" low="40" high="80"></meter><br>
+		<meter value="100" min="-100" max="200" low="40" high="80"></meter><br>
+		
+		<hr>
+		
+	 	<audio src="images/bach.mp3" controls></audio>
+		
+		<hr>
+		
+		<video src="images/dinosaur.mp4" controls autoplay="autoplay" muted></video>
+		
+		<hr>
+		
+		<input type="submit" value="전송하기">
+		
+		<hr>
+	
+	</form>
+	
+</body>
+</html>

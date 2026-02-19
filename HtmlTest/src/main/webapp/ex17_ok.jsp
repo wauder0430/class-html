@@ -11,5 +11,8 @@
 	<h1>결과</h1>
 
 	<p>전달받은 아이디: <%=request.getParameter("id") %></p>
+	
+	<p>전달받은 텍스트: <%=request.getParameter("txt1") %></p>
+	
 </body>
 </html>
